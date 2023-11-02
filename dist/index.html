@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nice-select2.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+  <div class="calculators">
+    <h1 class="_title">Калькулятор</h1>
+    <section class="calc">
+      <ul class="_options">
+        <li class="_options_item" data-key="1">Процесс 1</li>
+        <li class="_options_item" data-key="2">Процесс 2</li>
+      </ul>
+      <div class="_tab" id="1">
+        <h2 class="_title _2">Общий продукт - подсчет аминокислот под модель</h2>
+        <div class="_text">Входные параметры: смесь, отдельные белки + % изолята</div>
+        <div class="_items">
+          <div class="_mass_wrapper">
+            <div class="_params" data-value="mass" data-c="all">
+              <span class="_title _hw ">Весь состав</span>
+              <br>
+              <input type="text" name="weight" placeholder="Вес (гр)">
+              или 
+              <input type="text" name="percentage" placeholder="Процентное содержание (%)">
+            </div>
+            <div class="_params" data-value="mass-noprotein" data-c="noProtein">
+              <span class="_title _green">Небелковая часть</span>
+              <br>
+              <input type="text" name="weight"  placeholder="0">
+              или 
+              <input type="text" name="percentage" placeholder="0">
+            </div>
+            <div class="_result"></div>
+          </div>
+          <div class="_select_wrapper">
+            <select id="protein">
+              <option data-display="select">Выберите белок</option>
+              <option value="1">Гороховый</option>
+              <option value="2">Подсолнечный</option>
+              <option value="3">Тыквенный</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="_tab" id="2">
+        <h2 class="_title _2">Процесс 2</h2>
+        <div class="_text"></div>
+
+      </div>
+    </section>
+  </div>
+
+
+  <script src="./main.js"></script>
+</body>
+</html>

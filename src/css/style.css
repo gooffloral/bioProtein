@@ -1,14 +1,14 @@
 @font-face {
     font-family: "Moscow Sans Light";
-    src: url("/fonts/MoscowSans-Light.woff2");
+    src: url("../fonts/MoscowSans-Light.woff2");
   }
   @font-face {
     font-family: "Moscow Sans";
-    src: url("/fonts/MoscowSans-Regular.woff2");
+    src: url("../fonts/MoscowSans-Regular.woff2");
   }
   @font-face {
     font-family: "Moscow Sans Bold";
-    src: url("/fonts/MoscowSans-Bold.woff2");
+    src: url("../fonts/MoscowSans-Bold.woff2");
   }
 
 
@@ -115,7 +115,7 @@ span._title
     font-size: 26px;
     margin: 0;
 }
-input[type="text"] {
+input {
     border: 1px solid #b6bac0;
     border-radius: 8px;
     padding: 12px;

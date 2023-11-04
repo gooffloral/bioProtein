@@ -44,7 +44,10 @@ Calculator.prototype.deleteButton = function (e) {
 Calculator.prototype.weightInput = function (e) {
     const c = e.target.parentElement.dataset.c;
     const k = e.target.parentElement.dataset.key;
-
+    const value = parseInt(e.target.value);
+    if(k){
+        //const percentage = this.initEl[]
+    }
     console.log(c, k)
 }
 Calculator.prototype.percentageInput = function () {}

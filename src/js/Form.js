@@ -46,12 +46,15 @@ FormAdder.prototype.loadData = function(item, template) {
 
 FormAdder.prototype.addListeners = function() {
     this.initEl['protein'].addEventListener('change', (e) => {
+        
         const value = this.initEl['protein'].selectedOptions[0].value;
         if(value != 'Выберите белок')
         {
             const arr = this.getData('protein', this.initEl['protein'].selectedOptions[0].value);
+            console.log(this.dataGlobal.selectedValues['protein'].includes(arr.key));
             if(!this.dataGlobal.selectedValues['protein'].includes(arr.key)){
                 this.dataGlobal.selectedValues['protein'].push(value);
+                console.log(this.dataGlobal.selectedValues['protein']);
                 this.loadData(this.initEl['protein'].parentElement, this.getTemplate('protein', arr));
                 const selector = `._params._protein[data-value='${arr.key}']`;
                 const ev = new CustomEvent("new-template", {

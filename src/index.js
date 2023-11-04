@@ -15,6 +15,7 @@ Main.prototype.init = function() {
     this.proteinAdder = new FormAdder(this.data, 'protein');
     for(const e in this.data.get('selects'))
     {
+        console.log(e,this.data.get('selects'));
         new NiceSelect(document.getElementById(e), this.data.get('selects')[e]);
     }
 }
